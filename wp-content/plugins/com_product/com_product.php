@@ -44,7 +44,7 @@ require_once PLUGIN_PATH . "/helpers/RewriteHelper.php";
 $options['file'] = __FILE__;
 new RewriteHelper($options);
 $zController->getController("/frontend","AjaxController");
-?>
+
 
 
 
