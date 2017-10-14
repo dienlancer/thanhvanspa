@@ -19,25 +19,25 @@
     $productModel->prepare_items();
     $totalItems= $productModel->getTotalItems();               
     $arrPagination=array(
-                              "totalItems"=>$totalItems,
-                              "totalItemsPerPage"=>$totalItemsPerPage,
-                              "pageRange"=>$pageRange,
-                              "currentPage"=>$currentPage   
-                              );    
+      "totalItems"=>$totalItems,
+      "totalItemsPerPage"=>$totalItemsPerPage,
+      "pageRange"=>$pageRange,
+      "currentPage"=>$currentPage   
+  );    
     $pagination=$zController->getPagination("Pagination",$arrPagination); 
     // end phân trang   
     if(have_posts()){        
         $i=1; 
         while (have_posts()) {
             the_post();
-            $postID=$wp_query->post->ID;               
-            $productLink=get_the_permalink();
-            $productName=get_the_title();
+            $postID = $wp_query->post->ID;               
+            $productLink = get_the_permalink();
+            $productName = get_the_title();
             $fileUrl = wp_get_attachment_url(get_post_thumbnail_id());
-            $newFileName=$vHtml->getFileName($fileUrl);            
-            $newFileUrl=wp_upload_dir()["url"] . DS . $width . "x" . $height . "-" . $newFileName;
-            $meta_key="_zendvn_sp_zaproduct_";
-            $price =number_format(get_post_meta($postID,$meta_key."price",true),3,",",".") ;
+            $newFileName = $vHtml->getFileName($fileUrl);            
+            $newFileUrl = wp_upload_dir()["url"] . DS . $width . "x" . $height . "-" . $newFileName;
+            $meta_key = "_zendvn_sp_zaproduct_";
+            $price = number_format(get_post_meta($postID,$meta_key."price",true),3,",",".") ;
             ?>
             <div class="col-sm-4">
                 <div>
@@ -58,4 +58,4 @@
     }
     ?>
     <input type="hidden" name="filter_page" value="1" /> 
-    </form>
+</form>

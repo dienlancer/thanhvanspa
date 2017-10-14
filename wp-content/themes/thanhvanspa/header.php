@@ -57,6 +57,6 @@ $arrUser = @$ssUser->get($ssValue)["userInfo"];
     </div>
 </div>
 <div class="header">    
-    <div class="logo"><a href="<?php echo $customizerGlobal->general_section('link-site');?>"><img src="<?php echo $customizerGlobal->general_section('site-logo');?>" /></a></div>       
+    <div class="logo"><a href="index.php"><img src="<?php echo $customizerGlobal->general_section('site-logo');?>" /></a></div>       
 </div>
 <?php require_once "modal-login.php"; ?>

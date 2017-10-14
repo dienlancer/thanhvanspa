@@ -1,5 +1,6 @@
 <form  method="post"  class="frm">
 <?php 
+    
     if(have_posts()){
             while (have_posts()) {
                 the_post();

@@ -46,6 +46,3 @@ new RewriteHelper($options);
 $zController->getController("/frontend","AjaxController");
 
 
-
-
-
