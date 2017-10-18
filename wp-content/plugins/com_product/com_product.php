@@ -9,12 +9,12 @@ Author URI: http://cloudbeauty.vn
 */
 ob_start();
 require_once 'define.php';
-require_once plugin_dir_path(__FILE__) . '/includes/Controller.php';
+require_once PLUGIN_PATH . '/includes/Controller.php';
 global $zController,$zendvn_sp_settings;
 $zController = new zController();
 $zendvn_sp_settings = get_option('zendvn_sp_setting',array());
 if(!class_exists('HtmlControl')){
-	require_once plugin_dir_path(__FILE__) . '/includes/html.php';
+	require_once PLUGIN_PATH . '/includes/html.php';
 }
 if(is_admin()){
 	require_once 'backend.php';
@@ -30,7 +30,7 @@ if(is_admin()){
 	new Frontend();
 	
 }
-require_once plugin_dir_path(__FILE__) . "/metabox/taxonomy.php";
+require_once PLUGIN_PATH . "/metabox/taxonomy.php";
 new CategoryTaxonomy();
 require_once "module.php";
 new Module();

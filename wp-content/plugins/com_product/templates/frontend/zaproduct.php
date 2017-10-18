@@ -2,7 +2,6 @@
 	global $zController;
 ?>
 <?php get_header();?>
-<?php require_once get_template_directory() . DS . "menu.php"; ?>
 <div class="container index-slot">
     <div class="col-md-9">
     <!-- begin loop -->

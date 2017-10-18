@@ -28,11 +28,11 @@ class ModuleCustom extends WP_Widget {
 					echo $before_title . $title . $after_title;
 				}		
 			}				 
-			require plugin_dir_path(__FILE__) . '/html/module-custom.php';		
+			require PLUGIN_PATH . '/module/html/module-custom.php';		
 			echo $after_widget;	
 		}
 		else
-			require plugin_dir_path(__FILE__) . '/html/module-custom.php';				
+			require PLUGIN_PATH . '/module/html/module-custom.php';				
 	}
 	
 	public function update( $new_instance, $old_instance ) {			 
